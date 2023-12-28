@@ -1,7 +1,9 @@
 package org.example.module5;
 
+import java.lang.reflect.Field;
+
 public class OopDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
 //        Car firstCar = new Car();
 ////        String name = new String("Mykola"); //"Mykola"
 //        firstCar.color = "black";
@@ -35,16 +37,42 @@ public class OopDemo {
         Audi audi = new Audi();
         audi.setColor("Black");
         audi.setWheels(4);
-        printCar(audi);
-        System.out.println("audi.getMaxSpeed() = " + audi.getMaxSpeed());
+//        printCar(audi);
+//        System.out.println("audi.getMaxSpeed() = " + audi.getMaxSpeed());
 
         Car toyota = new Toyota();
         toyota.setColor("Blue");
         toyota.setWheels(6);
         printCar(toyota);
-        System.out.println("toyota = " + toyota);
-        System.out.println("toyota.getMaxSpeed() = " + toyota.getMaxSpeed());
-        
+
+        Car anotherToyota = new Toyota();
+        toyota.setColor("Blue");
+        toyota.setWheels(6);
+//        System.out.println("toyota = " + toyota);
+//        System.out.println("toyota.getMaxSpeed() = " + toyota.getMaxSpeed());
+//        System.out.println("toyota.equals(anotherToyota) = " + toyota.equals(anotherToyota));
+//        System.out.println("toyota.hashCode() = " + toyota.hashCode());
+//        System.out.println("anotherToyota.hashCode() = " + anotherToyota.hashCode());
+//        printCar(audi);
+//        printCar(toyota);
+
+//        Math math = new Math();
+//        int multiply = math.multiply(2, 5);
+//        System.out.println("multiply = " + multiply);
+//        long first = 123423562112352L;
+//        long second = 1234212362112352L;
+//        long longResult = math.multiply(first, 3);
+//        System.out.println("longResult = " + longResult);
+
+//        Person person = new Person();
+//        Class personClass = person.getClass();
+//        Field name = personClass.getDeclaredField("name");
+//        name.setAccessible(true);
+//        String personName = (String)name.get(person);
+//        System.out.println("personName = " + personName);
+
+//        Class personClass = Person.class;
+
     }
 
 //    private static void print(Person person) {
