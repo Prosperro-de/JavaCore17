@@ -2,18 +2,18 @@ package org.example.module6;
 
 public class ConstructorDemo {
     public static void main(String[] args) {
-//        Customer customer = new Customer();
-//        customer.setName("Mykola");
-//        customer.setAge(32);
-//        customer.setEmail("example@gmail.com");
-//        customer.setTaxNumber("123454");
+        Customer customer = new Customer();
+        customer.setName("Mykola");
+        customer.setAge(32);
+        customer.setEmail("example@gmail.com");
+        customer.setTaxNumber("123454");
 //        Customer customer = new Customer("Mykola");
 //        Customer customer = new Customer("Mykola", 32, 12344);
 //        Customer customer = new Customer("Mykola", 32, "example@gmail.com", "123454");
 //        Customer customer = new Customer(5555L, "Mykola", "Oleg", 32, "example@gmail.com", "123454");
 //        customer.getPhoneNumber()
-//        System.out.println("customer = " + customer);
-//        System.out.println("customer.getName() = " + customer.getName());
+        System.out.println("customer = " + customer);
+        System.out.println("customer.getName() = " + customer.getName());
 //        Customer customer = new Customer();
 
 
@@ -37,8 +37,9 @@ public class ConstructorDemo {
         Person person1 = new Person() {
             @Override
             public void goToWork() {
-//                some other logic
+                System.out.println("I'm going");
             }
         };
+        person1.goToWork();
     }
 }
