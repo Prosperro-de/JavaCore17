@@ -38,7 +38,7 @@ public class CustomStringBuilder {
     private void resizeValueArray(int minSize) {
         int increaseSize = value.length * 2;
         if (minSize > increaseSize) {
-            value = Arrays.copyOf(value, minSize);
+            value = Arrays.copyOf(value, pointer + minSize);
         } else {
             value = Arrays.copyOf(value, increaseSize);
         }
