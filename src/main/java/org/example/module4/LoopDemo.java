@@ -1,5 +1,6 @@
 package org.example.module4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LoopDemo {
@@ -53,6 +54,18 @@ public class LoopDemo {
 //        }
 
 //        login();
+        int[] intArray = {1, 43, 24, 56, 2};
+        for (int i = 0; i < intArray.length; i++) {
+            int intValue = intArray[i];
+            intValue = intValue * 2;
+        }
+        System.out.println(Arrays.toString(intArray));
+
+        for (int intValue : intArray) {
+            System.out.println(intValue  * 2);
+//            intValue = intValue  * 2;
+        }
+        System.out.println(Arrays.toString(intArray));
     }
 
     public static int findStudentIndex(String[] students) {
