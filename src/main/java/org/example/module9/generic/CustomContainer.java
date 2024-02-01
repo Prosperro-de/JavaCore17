@@ -1,9 +1,10 @@
 package org.example.module9.generic;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.Objects;
 
-public class CustomContainer <T> {
+public class CustomContainer <T> implements Iterable<Iterator> {
     public static final int DEFAULT_CAPACITY = 10;
     private T[] data;
     private int size;
@@ -35,5 +36,20 @@ public class CustomContainer <T> {
 
     public int getSize() {
         return size;
+    }
+
+    @Override
+    public Iterator<Iterator> iterator() {
+        return new Iterator<Iterator>() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public Iterator next() {
+                return null;
+            }
+        };
     }
 }
