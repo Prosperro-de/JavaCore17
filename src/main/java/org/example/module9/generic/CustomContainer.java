@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Objects;
 
 public class CustomContainer <T> implements Iterable<Iterator> {
-    public static final int DEFAULT_CAPACITY = 10;
+    public static final int DEFAULT_CAPACITY = 30;
     private T[] data;
     private int size;
 
